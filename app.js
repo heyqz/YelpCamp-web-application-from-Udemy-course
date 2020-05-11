@@ -25,6 +25,10 @@ mongoose.set('useUnifiedTopology', true);
 mongoose.connect("mongodb+srv://qizhen:Rao199547!@yelpcamp-gatio.mongodb.net/test?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	userCreateIndexes: true
+}).then(() => {
+	console.log("connected to DB");
+}).catch(err => {
+	console.log('ERROR:', err.message);
 });
 // mongodb+srv://qizhen:Rao199547!@yelpcamp-gatio.mongodb.net/test?retryWrites=true&w=majority
 
