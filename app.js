@@ -22,7 +22,10 @@ var indexRoutes = require("./routes/index");
 mongoose.set('useFindAndModify', false)
 mongoose.set('useUnifiedTopology', true);
 // mongoose.connect("mongodb://localhost:27017/yelp_camp", {'useNewUrlParser': true});
-mongoose.connect("mongodb+srv://qizhen:Rao199547!@yelpcamp-gatio.mongodb.net/test?retryWrites=true&w=majority", {'useNewUrlParser': true});
+mongoose.connect("mongodb+srv://qizhen:Rao199547!@yelpcamp-gatio.mongodb.net/test?retryWrites=true&w=majority", {
+	useNewUrlParser: true,
+	userCreateIndexes: true
+});
 // mongodb+srv://qizhen:Rao199547!@yelpcamp-gatio.mongodb.net/test?retryWrites=true&w=majority
 
 // set up body parser
