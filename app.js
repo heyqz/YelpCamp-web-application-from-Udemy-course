@@ -21,7 +21,9 @@ var indexRoutes = require("./routes/index");
 // connect with databse
 mongoose.set('useFindAndModify', false)
 mongoose.set('useUnifiedTopology', true);
+
 // mongoose.connect("mongodb://localhost:27017/yelp_camp", {'useNewUrlParser': true});
+
 const mongoURI = process.env.DATABASEURL;
 mongoose.connect(mongoURI, {
 	useNewUrlParser: true
